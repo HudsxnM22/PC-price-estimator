@@ -1,0 +1,110 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/background.gif');
+  }
+
+  #topNav {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1200px; /* Optional: Set a max width for the nav */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  #topBar {
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  
+
+  .topButton {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+  }
+
+  .topButton:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+  }
+
+  
+
+  #partPickerWindow {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    height: 100em;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  #howTo {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  }
+
+  #howToText {
+    font-family: Arial,sans-serif;
+    font-size: large;
+    font-weight: bold;
+  }
