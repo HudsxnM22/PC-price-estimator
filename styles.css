@@ -19,7 +19,7 @@ body {
   #topBar {
     height: 100px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    background-color: #ffffff;
+    background-color: #36454F;
     width: 80%;
     max-width: 80%;
     margin-left: auto;
@@ -38,12 +38,12 @@ body {
   .topButton {
     align-items: center;
     appearance: none;
-    background-color: #fff;
+    background-color: #36454F;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
     box-sizing: border-box;
-    color: #3c4043;
+    color: #d3d3d3;
     cursor: pointer;
     display: inline-flex;
     fill: currentcolor;
@@ -80,7 +80,7 @@ body {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ffffff;
+    background-color: #36454F;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
     height: 100em;
     padding: 20px;
@@ -94,7 +94,7 @@ body {
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: #36454F;
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -107,4 +107,5 @@ body {
     font-family: Arial,sans-serif;
     font-size: large;
     font-weight: bold;
+    color: #d3d3d3;
   }
