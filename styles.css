@@ -3,108 +3,123 @@ body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    background-image: url('Images/background.gif');
   }
 
   #topNav {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: -14px;
-    width: 0%;
+    margin-right: 0%;
+    width: 30%;
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
   }
 
-  #logoText {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-    margin-left: 5px;
-  }
-
   #topBar {
-    height: 70px;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    background-color: #36454F;
     width: 100%;
-    margin-left: auto;
+    margin-left: 59%;
     margin-right: auto;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    margin-top: -54.6%;
     left: 0;
     z-index: 1000;
     display: flex;
     align-items: left;
     justify-content: left;
-    border-radius: 15px;
+  }
+    
+  @media (max-width: 1100px) { /*for smaller webpage sizes and mobile users*/
+    #topBar {
+      width: 100%;
+      height: 80px;
+      position: sticky;
+      max-width: 100%;
+      border-color: aliceblue;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(235, 246, 255);
+    }
+    #topNav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 15%;
+    }
+    .topButton {
+      align-items: center;
+      appearance: none;
+      background-color: aliceblue;
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #3c4043;
+      cursor: pointer;
+      display: inline-flex;
+      fill: currentcolor;
+      font-family: Roboto,Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      justify-content: center;
+      letter-spacing: .25px;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+    }
+
+    .topButton:hover {
+      background: #F6F9FE;
+      color: #174ea6;
+    }
+
+    #banner {
+      margin-bottom: auto;
+      margin-top: 0%;
+      margin-left: 0%;
+    }
+  }
+  
+
+  #banner {
+    margin-bottom: auto;
+    margin-top: 0%;
+    margin-left: 0%;
   }
   
 
   .topButton {
-    align-items: center;
-    appearance: none;
-    border-color: rgb(255, 255, 255);
-    background-color: #36454F;
-    border-radius: 3px;
-    border-style: solid;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    box-sizing: border-box;
-    color: #d3d3d3;
-    cursor: pointer;
-    display: inline-flex;
-    fill: currentcolor;
-    font-family: Arial,sans-serif;
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
     font-weight: bold;
-    height: 48px;
-    justify-content: center;
-    letter-spacing: .25px;
-    line-height: normal;
-    max-width: 100%;
-    overflow: visible;
-    padding: 2px 24px;
-    position: relative;
-    text-align: center;
-    text-transform: none;
-    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: auto;
-    will-change: transform,opacity;
-    z-index: 0;
+    font-size: larger;
+    color: black;
+    padding: 10px 20px;
   }
 
-  .topButton:hover {
-    background: #F6F9FE;
-    color: #174ea6;
-  }
-
-  
-
-  #partPickerWindow {
-    position: sticky;
-    max-width: 45%;
-    top: 8%;
-    margin-right: auto;
-    margin-left: 1%;
-    background-color: #36454F;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-    height: 20em;
-    max-height: 20em;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    text-align: center;
-  }
 
   #howTo {
     max-width: fit-content;
     margin-left: auto;
-    margin-right: 1%;
+    margin-right: auto;
     background-color: #36454F;
     align-items: center;
     justify-content: center;
