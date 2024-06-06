@@ -3,6 +3,13 @@ body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
+    background-image: url("/Images/background.jpg");
+    background-size: contain;
+  }
+
+  #temp {
+    width: 3em;
+    height: 3000px;
   }
 
   #topNav {
@@ -28,7 +35,104 @@ body {
     align-items: left;
     justify-content: left;
   }
-    
+  
+  #banner {
+    margin-bottom: auto;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
+
+  .topButton {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    padding: 10px 20px;
+  }
+
+
+  #howTo {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(223, 253, 255);
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    position: relative;
+    opacity: 0; /* Start hidden */
+  }
+
+  #howToText {
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+  }
+
+  #aboutContent {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(223, 253, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    position: relative;
+    opacity: 0; /* Start hidden */
+  }
+
+  #about.inview {
+    animation: slideUp 1s forwards;
+    opacity: 1; /* Show when in view */
+  }
+
+  #howTo.inview {
+    animation: slideUp 1.4s forwards;
+    opacity: 1; /* Show when in view */
+  }
+
+  #aboutText {
+    position: relative;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    top: 10%;
+  }
+
+  #aboutTitle {
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    position: absolute;
+    top: 0%;
+  }
+
   @media (max-width: 1100px) { /*for smaller webpage sizes and mobile users*/
     #topBar {
       width: 100%;
@@ -96,42 +200,97 @@ body {
       margin-top: 0%;
       margin-left: 0%;
     }
-  }
+
+    #bottompage {
+      position: relative;
+      z-index: -1;
+      padding-top: 101%;
+      bottom: 0vh;
+    }
+
+    #aboutContent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #about {
+      display: flex;
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      justify-content: center;
+      min-width: 85%;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    }
+
+    #aboutTitle {
+      font-family: 'Roboto',sans-serif;
+      font-size: medium;
+      font-weight: bold;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: absolute;
+      top: -3%;
+    }
+
+    #aboutText {
+      font-family: 'Roboto',sans-serif;
+      font-size: small;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: relative;
+      top: 3%;
+    }
+
+    #howTo {
+      display: flex;
+      margin-top: 8%;
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      justify-content: center;
+      min-width: 85%;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    }
+
+    #howToTitle {
+      font-family: 'Roboto',sans-serif;
+      font-size: medium;
+      font-weight: bold;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: absolute;
+      top: -3%;
+    }
   
-
-  #banner {
-    margin-bottom: auto;
-    margin-top: 0%;
-    margin-left: 0%;
-  }
-  
-
-  .topButton {
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: larger;
-    color: black;
-    padding: 10px 20px;
+    #howToText {
+      font-family: 'Roboto',sans-serif;
+      font-size: small;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: relative;
+      top: 7%;
+    }
   }
 
-
-  #howTo {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #36454F;
-    align-items: center;
-    justify-content: center;
-    width: 45%;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  }
-
-  #howToText {
-    font-family: Arial,sans-serif;
-    font-size: large;
-    font-weight: bold;
-    color: #d3d3d3;
+  @keyframes slideUp {
+    0% {
+      bottom: -100%; /* Start below the container */
+      transform: translateY(400%);
+    }
+    100% {
+      bottom: 0; /* End at the final position */
+      transform: translateY(4%);
+    }
   }

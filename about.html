@@ -12,32 +12,39 @@
 </head>
 <body>
 
+  <div id="banner">
+    <img src="Images/aboutBanner.jpg" width="100%"></img>
+  </div>
+
   <div id="topBar">
-    <img src="Images/logo.png"></img>
-    <h2 id="logoText">PC-price Estimator</h2>
     <nav id="topNav">
-      <tr><a href="index.html"><button  class="topButton">Home</button></a></tr>
-      <tr><a href="about.html"><button  class="topButton">About</button></a></tr>
-      <tr><a href="https://www.ebay.com/sl/sell"><button title="E-bay" class="topButton">Sell</button></a></tr>
+      <tr><a href="index.html" class="topButton"><h4>Home</h4></a></tr>
+      <tr><a href="about.html" class="topButton"><h4>About</h4></a></tr>
+      <tr><a href="https://www.ebay.com/sl/sell" class="topButton"><h4>Sell</h4></a></tr>
     </nav>
   </div>
 
   <br>
   <br>
 
-  <div id="howTo">
-    <p id="howToText">PC-part Estimator is a personal development project developed by a Hudson M, with the purpose to give beginner PC sellers an estimated price to sell their PC. This service requires you input all the components in the computer your trying to sell then interacts with E-bay's API to determine the best price for that item based on past sold versions of that component. A design decision was made to make the components choosing segment as beginner friendly as possible, and therefore only allows you to select the standard or broad variants of your parts. This means if you have a special limited edition part that you think might sell for more then unfortunately this service will not find an accurate price for that specific part. If you have a GPU for example thats a 6700xt this will only looks at the price for the term 6700xt and will not look at specific card models and manufacturers of that card, this decision was made with the assumption that most buyers generally buy based on card type and not specifics like the model and manufacturers.</p>
+  <div id="aboutContent">
+    <div id="about">
+      <h4 id="aboutTitle">About</h4>
+      <p id="aboutText">PC-part Estimator is a personal development project developed by Hudson M, with the purpose to give beginner PC sellers an estimated price to sell their PC. This service requires you input all the components in the computer your trying to sell then interacts with E-bay's API to determine the best price for that item based on past sold versions of that component. A design decision was made to make the components choosing segment as beginner friendly as possible, and therefore only allows you to select the standard or broad variants of your parts. This means if you have a special limited edition part that you think might sell for more then unfortunately this service will not find an accurate price for that specific part. If you have a GPU for example thats an AMD Gigabyte limited edition rx 6700xt this will only looks at the price for the term AMD rx 6700xt and will not look at specific card models and manufacturers of that card, this decision was made with the assumption that most buyers generally buy based on card type and not specifics like the model and manufacturers.</p>
+    </div>
+    <br>
+    <div id="howTo">
+      <h4 id="howToTitle">How to find your parts</h4>
+      <p id="howToText">To find out what's inside your PC, you can use built-in tools like msinfo32 or Device Manager in Windows, which provide details about your hardware components. Third-party software like <a href="https://www.hwinfo.com/download/">HWInfo</a>, and <a href="https://www.ccleaner.com/speccy/download">Speccy</a> offer more comprehensive information. Additionally, you can open your PC case and visually inspect the components, such as the CPU, RAM, motherboard, and GPU. Ensure your PC is turned off and unplugged before opening it. Labels on the components can help identify them. This combined approach gives you a clear understanding of the parts in your PC.</p>
+    </div>
+    <br>
+  </div>
+  <br>
+
+  <div id="bottompage">
+    <img src="/Images/bottompage.png" width="100%"></img>
   </div>
 
-  <br>
-
-  <div id="howTo">
-    <h3 id="howToText">How to identify your parts</h3>
-    <p id="howToText">To find out what's inside your PC, you can use built-in tools like msinfo32 or Device Manager in Windows, which provide details about your hardware components. Third-party software like <a href="https://www.hwinfo.com/download/">HWInfo</a>, and <a href="https://www.ccleaner.com/speccy/download">Speccy</a> offer more comprehensive information. Additionally, you can open your PC case and visually inspect the components, such as the CPU, RAM, motherboard, and GPU. Ensure your PC is turned off and unplugged before opening it. Labels on the components can help identify them. This combined approach gives you a clear understanding of the parts in your PC.</p>
-  </div>
-
-  <br>
-  <br>
-
+  <script src="visibility.js"></script>
 </body>
 </html>
