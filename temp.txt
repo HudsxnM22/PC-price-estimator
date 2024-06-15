@@ -70,3 +70,133 @@
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
+<!-- HTML !-->
+<button class="button-69" role="button">Button 69</button>
+
+/* CSS */
+.button-69 {
+  background-color: initial;
+  background-image: linear-gradient(#8614f8 0, #760be0 100%);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(245, 244, 247, .25) 0 1px 1px inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -4px;
+  outline: 0;
+  text-align: center;
+  transition: all .3s cubic-bezier(.05, .03, .35, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: bottom;
+  width: 190px;
+}
+
+.button-69:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 1000px) {
+  .button-69 {
+    font-size: 14px;
+    height: 55px;
+    line-height: 55px;
+    width: 150px;
+  }
+}
+
+const IntelCPUs = () => {
+    FetchCPUs().then(cpus => {
+        let intcpus;
+        cpus.forEach(element => {
+            if{
+                element.
+            }
+        });
+    });
+}
+
+<!-- HTML !-->
+<button class="button-28" role="button">Button 28</button>
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+            <select id="cpus-brand" name="cpu-brand">
+              <option value="0">Select CPU brand</option>
+              <option value="1">Intel</option>
+              <option value="2">AMD</option>
+              <option value="3">Other</option>
+            </select>
+            <select id="cpus" name="cpu">
+              <option value="0">Select CPU</option>
+              <option value="#">option</option>
+            </select>
+
+            <select id="gpus-brand" name="gpu brand">
+              <option value="0">Select GPU brand</option>
+              <option value="1">Intel</option>
+              <option value="2">AMD</option>
+              <option value="3">Nvidia</option>
+            </select>
+            <select id="gpus" name="gpu">
+              <option value="0">Select GPU</option>
+              <option value="#">option</option>
+            </select>
+
+            <select id="cpu-cooler" name="cpu-cooler">
+              <option value="0">Select cooler</option>
+              <option value="1">non tower air cooler</option>
+              <option value="2">Tower air cooler</option>
+              <option value="3">Liquid cooler</option>
+            </select>

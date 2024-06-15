@@ -12,27 +12,172 @@
 </head>
 <body>
 
-  <div id="banner">
-    <img src="Images/banner.jpg" width="100%"></img>
-  </div>
 
   <div id="topBar">
+    <div id="topBarTitle">
+        <img src="/Images/logo.png" id="logo-banner" width="90px"></img>
+        <h1>PC Price Estimator</h1>
+    </div>
     <nav id="topNav">
       <tr><a href="index.html" class="topButton"><h4>Home</h4></a></tr>
       <tr><a href="about.html" class="topButton"><h4>About</h4></a></tr>
       <tr><a href="https://www.ebay.com/sl/sell" class="topButton"><h4>Sell</h4></a></tr>
     </nav>
   </div>
-
   <br>
-    <div id="temp">
+  <div class="pc-title">
+    <h3 id="pc-title-text">Build PC. Get Estimate. Sell it.</h3>
+  </div>
+  <div id="main-wrapper">
+    <div id="pc-builder">
+      <div id="pc-component-picker-title">
+        <h3>PC builder.</h3>
+        <a id="submitButton"><button id="pc-builder-submit-button">Find Estimate</button></a>
+      </div>
+      <div id="dropDownMenuHolder">
+          <table>
+            <tr>
+                <th>Component</th>
+                <th>Selection</th>
+            </tr>
+            <tr>
+                <td>CPU</td>
+                <td class="selection-cell">
+                    <select id="cpu-select-brand" class="component-select">
+                        <option value="">Choose A CPU brand</option>
+                        <option value="intel">Intel</option>
+                        <option value="amd">AMD</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <select id="cpu-select" class="component-select">
+                      <option value="">Choose A CPU</option>
+                      <option value="intel">Opt</option>
+                      <!-- Add more options as needed -->
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td>CPU Cooler</td>
+                <td>
+                    <select id="cpu-cooler-select" class="component-select">
+                        <option value="">Choose A CPU Cooler</option>
+                        <option value="aircooler">Aircooler</option>
+                        <option value="tower air-cooler">Tower air-cooler</option>
+                        <option value="liquid cooler">Liquid cooler</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Motherboard</td>
+                <td class="selection-cell">
+                    <select id="motherboard-select-type" class="component-select">
+                        <option value="">Choose A Motherboard Type</option>
+                        <option value="mini-itx">Mini-ITX</option>
+                        <option value="micro-atx">Micro-ATX</option>
+                        <option value="atx">ATX</option>
+                        <option value="not-sure">I'm not sure</option>
+                    </select>
+                    <select id="motherboard-select-socket" class="component-select">
+                      <option value="">Choose a Motherboard Socket</option>
+                      <option value="lga-2011">LGA 2011 (Intel)</option>
+                      <option value="lga-1155">LGA 1155 (Intel)</option>
+                      <option value="lga-1150">LGA 1150 (Intel)</option>
+                      <option value="lga-1151">LGA 1151 (Intel)</option>
+                      <option value="lga-1200">LGA 1200 (Intel)</option>
+                      <option value="lga-1700">LGA 1700 (Intel)</option>
+                      <option value="lga-1851">LGA 1851 (Intel)</option>
+                      <option value="am3-plus">AM3+ (AMD)</option>
+                      <option value="am4">AM4 (AMD)</option>
+                      <option value="am5">AM5 (AMD)</option>
+                      <option value="not-sure">I'm not sure</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Memory</td>
+                <td>
+                    <select id="memory-select" class="component-select">
+                        <option value="">Choose Memory</option>
+                        <option value="kingston">Kingston</option>
+                        <option value="corsair">Corsair</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Storage</td>
+                <td>
+                    <select id="storage-select" class="component-select">
+                        <option value="">Choose Storage</option>
+                        <option value="1">Aircooler</option>
+                        <option value="2">Tower air-cooler</option>
+                        <option value="2">Liquid cooler</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Video Card</td>
+                <td class="selection-cell">
+                    <select id="gpu-select-brand" class="component-select">
+                        <option value="">Choose A GPU brand</option>
+                        <option value="nvidia">NVIDIA</option>
+                        <option value="amd">AMD</option>
+                        <option value="amd">Intel</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <select id="gpu-select" class="component-select">
+                      <option value="">Choose A GPU</option>
+                      <option value="intel">Opt</option>
+                      <!-- Add more options as needed -->
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Case</td>
+                <td>
+                    <select id="case-select" class="component-select">
+                        <option value="">Choose A Case</option>
+                        <option value="nzxt">NZXT</option>
+                        <option value="corsair">Corsair</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Power Supply</td>
+                <td>
+                    <select id="power-supply-select" class="component-select">
+                        <option value="">Choose A Power Supply</option>
+                        <option value="evga">EVGA</option>
+                        <option value="corsair">Corsair</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </td>
+            </tr>
+        </table>
+      </div>
     </div>
 
+    <div id="price-display">
+        <h1 id="price-display-title">Your PC is worth</h1>
+        <h1 id="price-estimate">|input parts|</h1>
+        <p id="disclaimer">this estimate is based on the average sold price of each of your parts via ebay</p>
+    </div>
+   </div>
   <br>
-  <div id="bottompage">
-    <img src="/Images/bottompage.png" width="100%"></img>
-  </div>
+    <div id="howToHolder">
+        <div id="howToTitle">
+            How to find your parts
+        </div>
+        <div id="howToContent">
+            <div><p id="howToText">To find out what's inside your PC, you can use built-in tools like msinfo32 or Device Manager in Windows, which provide details about your hardware components. Third-party software like <a href="https://www.hwinfo.com/download/">HWInfo</a>, and <a href="https://www.ccleaner.com/speccy/download">Speccy</a> offer more comprehensive information. Additionally, you can open your PC case and visually inspect the components, such as the CPU, RAM, motherboard, and GPU. Ensure your PC is turned off and unplugged before opening it. Labels on the components can help identify them. Below are various videos that show you how you can determine your parts.</p></div>
+            <div class="howToVid"><iframe width="500" height="300" src="https://www.youtube.com/embed/KtFAxFKtDTs" title="How To Check PC Specs - Full Guide" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <div class="howToVid"><iframe width="1903" height="742" src="https://www.youtube.com/embed/7wYujx3k6pA" title="How To Check PC/LAPTOP Specs On Windows (2023)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <div class="howToVid"><iframe width="1903" height="742" src="https://www.youtube.com/embed/N5CDzK_b-ng" title="How To: Use Speccy to get your computer&#39;s Specs | Speccy Tutorial For Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+    </div>
+  <br>
 
-
+  <script src="populateCPUandGPU.js"></script>
 </body>
 </html>
