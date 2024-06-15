@@ -89,6 +89,7 @@ body {
     margin-left: 4%;
     background-color: rgb(255, 255, 255);
     position: relative;
+    animation: slideInRight 1.4s;
   }
 
   #pc-component-picker-title {
@@ -205,6 +206,7 @@ body {
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    animation: slideInLeft 1.4s;
   }
 
   #price-display:hover {
@@ -585,13 +587,24 @@ body {
 
   }
 
-  @keyframes slideUp {
+  @keyframes slideInLeft {
     0% {
-      bottom: -100%; /* Start below the container */
-      transform: translateY(400%);
+      right: -100%; /* Start right of the container */
+      transform: translateX(400%);
     }
     100% {
-      bottom: 0; /* End at the final position */
-      transform: translateY(4%);
+      right: 0; /* End at the final position */
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      left: -80%; 
+      transform: translateX(-100%);
+    }
+    100% {
+      left: 0;
+      transform: translateX(0%);
     }
   }
