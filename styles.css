@@ -181,12 +181,14 @@ body {
       cursor: pointer;
   }
 
+
   .component-select:hover {
       color: #ffffff;
       background-color: rgb(14, 36, 56);
       box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
       transform: translateY(-2px);
   }
+
 
       /*[price display]*/
   #price-display {
