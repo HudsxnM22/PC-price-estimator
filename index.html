@@ -101,10 +101,51 @@
             <tr>
                 <td class = "component-cell">Memory</td>
                 <td class="selection-cell">
-                    <select id="memory-select" class="component-select">
-                        <option value="">Choose Memory</option>
-                        <option value="kingston">Kingston</option>
-                        <option value="corsair">Corsair</option>
+                    <select id="memory-size-select" class="component-select">
+                        <option value="">Choose RAM Size</option>
+                        <option value="1">1 GB</option>
+                        <option value="2">2 GB</option>
+                        <option value="4">4 GB</option>
+                        <option value="8">8 GB</option>
+                        <option value="16">16 GB</option>
+                        <option value="32">32 GB</option>
+                        <option value="64">64 GB</option>
+                        <option value="128">128 GB</option>
+                        <option value="246">246 GB</option>
+                    </select>
+                    <select id="memory-speed-select" class="component-select">
+                        <option value="">Choose RAM Speed</option>
+                        <option value="800">800 MHz</option>
+                        <option value="1066">1066 MHz</option>
+                        <option value="1333">1333 MHz</option>
+                        <option value="1600">1600 MHz</option>
+                        <option value="1866">1866 MHz</option>
+                        <option value="2133">2133 MHz</option>
+                    
+                        <!-- DDR4 RAM Speeds -->
+                        <option value="2133">2133 MHz</option>
+                        <option value="2400">2400 MHz</option>
+                        <option value="2666">2666 MHz</option>
+                        <option value="2933">2933 MHz</option>
+                        <option value="3200">3200 MHz</option>
+                        <option value="3600">3600 MHz</option>
+                        <option value="4000">4000 MHz</option>
+                        <option value="4266">4266 MHz</option>
+                    
+                        <!-- DDR5 RAM Speeds -->
+                        <option value="4800">4800 MHz</option>
+                        <option value="5200">5200 MHz</option>
+                        <option value="5600">5600 MHz</option>
+                        <option value="6000">6000 MHz</option>
+                        <option value="6400">6400 MHz</option>
+                        <option value="7200">7200 MHz</option>
+                        <option value="8400">8400 MHz</option>
+                    </select>
+                    <select id="memory-type-select" class="component-select">
+                        <option value="">Choose RAM Type</option>
+                        <option value="DDR3">DDR3</option>
+                        <option value="DDR4">DDR4</option>
+                        <option value="DDR5">DDR5</option>
                         <!-- Add more options as needed -->
                     </select>
                 </td>
@@ -112,11 +153,21 @@
             <tr>
                 <td class = "component-cell">Storage</td>
                 <td class="selection-cell">
-                    <select id="storage-select" class="component-select">
+                    <select id="storage-select-type" class="component-select">
                         <option value="">Choose Storage</option>
-                        <option value="1">Aircooler</option>
-                        <option value="2">Tower air-cooler</option>
-                        <option value="2">Liquid cooler</option>
+                        <option value="NVME SSD">NVME SSD</option>
+                        <option value="SSD">SSD</option>
+                        <option value="HDD">Hardrive</option>
+                    </select>
+                    <select id="storage-select-size" class="component-select">
+                        <option value="">Choose Storage Size</option>
+                        <option value="128">128 GB</option>
+                        <option value="256">256 GB</option>
+                        <option value="512">512 GB</option>
+                        <option value="1024">1 TB</option>
+                        <option value="2048">2 TB</option>
+                        <option value="4096">4 TB</option>
+                        <option value="8192">8 TB</option>
                     </select>
                 </td>
             </tr>
@@ -128,12 +179,11 @@
                         <option value="nvidia">NVIDIA</option>
                         <option value="amd">AMD</option>
                         <option value="intel">Intel</option>
-                        <!-- Add more options as needed -->
+                        
                     </select>
                     <select id="gpu-select" class="component-select">
                       <option value="">Choose A GPU</option>
-                      <option value="intel">Opt</option>
-                      <!-- Add more options as needed -->
+                      
                   </select>
                 </td>
             </tr>
@@ -142,20 +192,47 @@
                 <td class="selection-cell">
                     <select id="case-select" class="component-select">
                         <option value="">Choose A Case</option>
-                        <option value="nzxt">NZXT</option>
-                        <option value="corsair">Corsair</option>
-                        <!-- Add more options as needed -->
+                        <option value="full-tower">Full Tower</option>
+                        <option value="mid-tower">Mid Tower</option>
+                        <option value="mini-tower">Mini Tower</option>
+                        <option value="micro-tower">Micro Tower</option>
+                        <option value="small-form-factor">Small Form Factor (SFF)</option>
+                        
                     </select>
                 </td>
             </tr>
             <tr>
                 <td class = "component-cell" id="power-supply-title">Power Supply</td>
                 <td class="selection-cell">
-                    <select id="power-supply-select" class="component-select">
-                        <option value="">Choose A Power Supply</option>
-                        <option value="evga">EVGA</option>
-                        <option value="corsair">Corsair</option>
-                        <!-- Add more options as needed -->
+                    <select id="power-supply-select-rating" class="component-select">
+                        <option value="">Choose PSU rating</option>
+                        <option value="80-plus">80 Plus</option>
+                        <option value="80-plus-bronze">80 Plus Bronze</option>
+                        <option value="80-plus-silver">80 Plus Silver</option>
+                        <option value="80-plus-gold">80 Plus Gold</option>
+                        <option value="80-plus-platinum">80 Plus Platinum</option>
+                        <option value="80-plus-titanium">80 Plus Titanium</option>
+                        <option value="idk">im not sure</option>
+                    </select>
+                    <select id="power-supply-select-wattage" class="component-select">
+                        <option value="">Choose PSU power</option>
+                        <option value="300W">300W</option>
+                        <option value="400W">400W</option>
+                        <option value="450W">450W</option>
+                        <option value="500W">500W</option>
+                        <option value="550W">550W</option>
+                        <option value="600W">600W</option>
+                        <option value="650W">650W</option>
+                        <option value="700W">700W</option>
+                        <option value="750W">750W</option>
+                        <option value="800W">800W</option>
+                        <option value="850W">850W</option>
+                        <option value="900W">900W</option>
+                        <option value="1000W">1000W</option>
+                        <option value="1200W">1200W</option>
+                        <option value="1500W">1500W</option>
+                        <option value="1600W">1600W</option>
+                        <option value="idk">im not sure</option>
                     </select>
                 </td>
             </tr>
