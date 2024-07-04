@@ -307,7 +307,7 @@ body {
   #aboutText {
     position: relative;
     padding-left: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 40px;
     font-family: 'Roboto',sans-serif;
     font-size: large;
     font-weight: bold;
