@@ -155,6 +155,7 @@ body {
       font-weight: bold;
   }
 
+
   th {
       background-color: transparent;
       color: #000000;
@@ -162,8 +163,10 @@ body {
       border-top-color: transparent;
   }
 
+
   .selection-cell {
     display: flex;
+    flex-direction: row;
     gap: 5px;
   }
 
@@ -171,24 +174,21 @@ body {
       font-family: 'Roboto', sans-serif;
       font-weight: bold;
       width: 100%;
-      padding: 10px;
+      padding: 3px;
       font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 2px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
       background-color: transparent;
       border-color: #000000;
       appearance: none;
       cursor: pointer;
+      margin-bottom: 3px;
   }
-
 
   .component-select:hover {
-      color: #ffffff;
-      background-color: rgb(14, 36, 56);
-      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-      transform: translateY(-2px);
+    background-color: rgb(22, 56, 88);
+    color: #ffffff;
   }
-
 
       /*[price display]*/
   #price-display {
@@ -209,6 +209,7 @@ body {
     border-top-left-radius: 15px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
     animation: slideInLeft 1.4s;
+    width: 35%;
   }
 
   #price-display:hover {
@@ -279,9 +280,8 @@ body {
    /*About page----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
   #aboutContent {
-    position: absolute;
+    margin-top: 100px;
     display: flex;
-    justify-content: space-between;
   }
 
   #about {
@@ -297,12 +297,6 @@ body {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
     position: relative;
-    opacity: 0; /* Start hidden */
-  }
-
-  #about.inview {
-    animation: slideUp 1s forwards;
-    opacity: 1; /* Show when in view */
   }
 
   #howTo.inview {
@@ -459,7 +453,7 @@ body {
       font-size: smaller;
       font-weight: bold;
       box-sizing: border-box;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     .selection-cell {
@@ -587,6 +581,13 @@ body {
       top: 3%;
     }
 
+  }
+
+  @media (max-width: 700px) { /*media for very small screens and some specific detailing regarding mobile site---------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Power supply title will wrap making the bottom lines not line up this is to fix it. it only happens for power supply*/
+    #power-supply-title {
+      font-size: small;
+    }
   }
 
   @keyframes slideInLeft {
