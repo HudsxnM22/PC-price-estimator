@@ -183,11 +183,12 @@ body {
       appearance: none;
       cursor: pointer;
       margin-bottom: 3px;
+      color: gray;
   }
 
-  .component-select:hover {
-    background-color: rgb(22, 56, 88);
-    color: #ffffff;
+
+  option {
+    color: black;
   }
 
       /*[price display]*/
@@ -226,6 +227,7 @@ body {
     background-color: rgb(14, 36, 56);
     position: relative;
     margin-bottom: 0%;
+    margin-top: 75px;
   }
 
   #howToTitle {

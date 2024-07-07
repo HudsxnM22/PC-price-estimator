@@ -108,15 +108,6 @@ const populateGPUDropDown = (displayArray) => {
 
 //displays the CPU based on brand
 $(document).ready( function(){
-    //$('.component-select').select2({
-    //    width: '100%', //sets all select components to be select 2
-    //    theme: 'custom'
-    //});
-    //$("#motherboard-select-socket").select2({
-    //    allowClear: true,
-    //    width: '100%',
-    //    theme: 'custom'
-    //})
     const $cpuBrandSelect = $("#cpu-select-brand"); //stores jquery id of dropdown menu for cpu BRAND
     const $cpuSelect = $("#cpu-select");
     const $gpuBrandSelect = $("#gpu-select-brand"); //stores jquery id of dropdown menu for gpu BRAND
@@ -150,6 +141,36 @@ $(document).ready( function(){
         if($gpuBrandSelect.val() == ''){
             $gpuSelect.empty(); 
         }
+    });
+});
+
+$(document).ready( function(){
+    const $selectElements = [
+        $("#cpu-select-brand"),
+        $("#cpu-cooler-select"),
+        $("#motherboard-select-type"),
+        $("#motherboard-select-socket"),
+        $("#memory-size-select"),
+        $("#memory-speed-select"),
+        $("#memory-type-select"),
+        $("#storage-select-type"),
+        $("#storage-select-size"),
+        $("#gpu-select-brand"),
+        $("#case-select"),
+        $("#power-supply-select-rating"),
+        $("#power-supply-select-wattage")
+    ];
+    
+    function handleSelectChange() {
+        if ($(this).val() != "") {
+            $(this).css('color', 'black');
+        } else {
+            $(this).css('color', 'gray');
+        }
+    }
+    
+    $selectElements.forEach($select => {
+        $select.on('change', handleSelectChange);
     });
 });
 
