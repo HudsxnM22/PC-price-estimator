@@ -1,6 +1,8 @@
-//populates the cpu and gpu dropdown menues based on brand chosen via j-query and Select2
+import { compileUserSelectedComponents } from "./modules/SelectedComponents.js";
 
-intelcpus = [], amdcpus = [], nvidiagpus = [], amdgpus = [], intelgpus = [];
+//populates the cpu and gpu dropdown menues based on brand chosen via j-query and Select2 then calls compiling module function to send to back end and recieve price.
+
+let intelcpus = [], amdcpus = [], nvidiagpus = [], amdgpus = [], intelgpus = [];
 //grabs cpu array list from back end database
 const FetchComponents = async () => {
     try{    
@@ -21,11 +23,11 @@ const FetchComponents = async () => {
 }
 
 //organizes cpus into select2 objects so they can be used in the searchable dropdown menu
-const select2Intelcpus = [], select2Amdcpus = [], select2Nvidiagpus = [], select2Amdgpus = [], select2Intelgpus = [];
+let select2Intelcpus = [], select2Amdcpus = [], select2Nvidiagpus = [], select2Amdgpus = [], select2Intelgpus = [];
 
 
 //categorizes CPUs and GPUs into their select2 arrays as the select2 variants of themselves
-const categorizeComponents = async (intelcpus, amdcpus, nvidiagpus, amdgpus, intelgpus) => { //must store the elements as JSON objects in this format in order to populate the select2 dropdown menu.
+const categorizeComponents = () => { //must store the elements as JSON objects in this format in order to populate the select2 dropdown menu.
     try{
         intelcpus.forEach(element => { //CPUS
             select2Intelcpus.push({ 
@@ -65,7 +67,7 @@ const categorizeComponents = async (intelcpus, amdcpus, nvidiagpus, amdgpus, int
 
 const initialize = async () => {
     await FetchComponents();
-    await categorizeComponents(intelcpus, amdcpus, nvidiagpus, amdgpus, intelgpus);
+    await categorizeComponents();
 
     //filter tests
     //console.log(intelcpus);
@@ -144,7 +146,7 @@ $(document).ready( function(){
     });
 });
 
-$(document).ready( function(){
+$(document).ready( function(){ //not select2 nodes
     const $selectElements = [
         $("#cpu-select-brand"),
         $("#cpu-cooler-select"),
@@ -176,5 +178,7 @@ $(document).ready( function(){
 
 initialize(); //initializes the arrays
 
-
-
+//compile user inputted parts | problems: user spamming button, user not inputting all parts.
+document.getElementById("pc-builder-submit-button").addEventListener("click", () => {
+    console.log(compileUserSelectedComponents());
+});
