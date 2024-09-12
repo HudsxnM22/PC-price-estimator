@@ -213,9 +213,18 @@ body {
     width: 35%;
   }
 
-  #price-display:hover {
+  #how-price:hover {
     background-color: rgb(14, 36, 56);
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  }
+
+  #how-price {
+    color:#ffffff;
+    font-size: 10px;
+    text-decoration: none;
+    border: 2px, solid, white;
+    padding: 5px;
+    border-radius: 20px;
   }
    
 

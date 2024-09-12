@@ -179,6 +179,24 @@ $(document).ready( function(){ //not select2 nodes
 initialize(); //initializes the arrays
 
 //compile user inputted parts | problems: user spamming button, user not inputting all parts.
-document.getElementById("pc-builder-submit-button").addEventListener("click", () => {
-    console.log(compileUserSelectedComponents());
+document.getElementById("pc-builder-submit-button").addEventListener("click", async () => {
+    let selectedComponents = await compileUserSelectedComponents();
+
+    let price = await fetchPrice(selectedComponents);
+
+    document.getElementById("price-estimate").textContent = price.price;
 });
+
+const fetchPrice = async function(selectedComponents){ //calls back end for back end processing and returns price estimate
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            },
+        body: JSON.stringify(selectedComponents)
+    }
+
+    const response = await fetch('https://pcpricee.xyz:3566/get-price', options);
+    let data = await response.json();
+    return data;
+}
