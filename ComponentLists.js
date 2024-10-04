@@ -6,15 +6,15 @@ let intelcpus = [], amdcpus = [], nvidiagpus = [], amdgpus = [], intelgpus = [];
 //grabs cpu array list from back end database
 const FetchComponents = async () => {
     try{    
-        var response = await fetch('https://pcpricee.xyz:3566/intel-cpus'); //fetches intel cpus and stores them into intel cpu array as strings
+        var response = await fetch('https://pcpricee.xyz/intel-cpus'); //fetches intel cpus and stores them into intel cpu array as strings
         intelcpus = await response.json();
-        var response = await fetch('https://pcpricee.xyz:3566/amd-cpus'); //fetches amd cpus
+        var response = await fetch('https://pcpricee.xyz/amd-cpus'); //fetches amd cpus
         amdcpus = await response.json();
-        var response = await fetch('https://pcpricee.xyz:3566/nvidia-gpus'); //[nvidia]fetches gpus and stores them into their respective arrays as strings
+        var response = await fetch('https://pcpricee.xyz/nvidia-gpus'); //[nvidia]fetches gpus and stores them into their respective arrays as strings
         nvidiagpus = await response.json();
-        var response = await fetch('https://pcpricee.xyz:3566/amd-gpus');//[amd]
+        var response = await fetch('https://pcpricee.xyz/amd-gpus');//[amd]
         amdgpus = await response.json();
-        var response = await fetch('https://pcpricee.xyz:3566/intel-gpus');//[intel]
+        var response = await fetch('https://pcpricee.xyz/intel-gpus');//[intel]
         intelgpus = await response.json();
     }
     catch(error){
@@ -68,17 +68,12 @@ const categorizeComponents = () => { //must store the elements as JSON objects i
 const initialize = async () => {
     await FetchComponents();
     await categorizeComponents();
+}
 
-    //filter tests
-    //console.log(intelcpus);
-    //console.log(amdcpus);
-    //console.log(nvidiagpus);
-    //console.log(amdgpus);
-    //console.log(intelgpus);
-
+$(document).ready( function(){ //waits for initialization and then renders the cpu and gpu dropdown as select2 drop downs.
     populateCPUDropDown();
     populateGPUDropDown();
-}
+});
 
 //populate the dropdown menu for cpus via J-query
 const populateCPUDropDown = (displayArray) => {
@@ -181,6 +176,7 @@ initialize(); //initializes the arrays
 //compile user inputted parts | problems: user spamming button, user not inputting all parts.
 document.getElementById("pc-builder-submit-button").addEventListener("click", async () => {
     let selectedComponents = await compileUserSelectedComponents();
+
 
     let price = await fetchPrice(selectedComponents);
 
