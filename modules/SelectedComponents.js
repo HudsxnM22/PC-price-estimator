@@ -3,14 +3,14 @@ export function compileUserSelectedComponents() {
     //this checks to see if their has been an input selected and if there has been it stores that into an object to be later processed by the webserver
     let compiledList = {
         "selectedComponents": [
-            extractComponentSelected("CPUs", true),
-            extractComponentSelected("CPUcoolers", false),
-            extractComponentSelected("motherboards", false),
-            extractComponentSelected("memory", false),
-            extractComponentSelected("storages", false),
-            extractComponentSelected("GPUs", true),
-            extractComponentSelected("cases", false),
-            extractComponentSelected("power-supply", false)
+            {partname: extractComponentSelected("CPUs", true), part: 'cpu'},
+            {partname: extractComponentSelected("CPUcoolers", false), part: 'cpu-cooler'},
+            {partname: extractComponentSelected("motherboards", false), part: 'mobo'},
+            {partname: extractComponentSelected("memory", false), part: 'mem'} ,
+            {partname: extractComponentSelected("storages", false), part: 'storage'},
+            {partname: extractComponentSelected("GPUs", true), part: 'gpu'},
+            {partname: extractComponentSelected("cases", false), part: 'case'},
+            {partname: extractComponentSelected("power-supply", false), part: 'psu'}
         ] //since it just queries all items that are selected, knowing the specific types selected is irrelevant
     }
 
@@ -45,7 +45,7 @@ function extractComponentSelected(partToCheck, isItSelect2) { //part to check sh
         if(isThatPartSelected){
             let partName = "";
             childrenIds.forEach(elm => {
-                partName = partName + " " + document.getElementById(elm).value;
+                partName = partName + "+" + document.getElementById(elm).value;
             });
             return partName;
         }
@@ -64,7 +64,7 @@ function extractComponentSelected(partToCheck, isItSelect2) { //part to check sh
 
         if(isThatPartSelected){
             let select2Elm = $("#" + childrenIds[1]).select2('data');
-            return  brandName+ " " + select2Elm[0].text; //extaract the name of the selected component its an object in an array | it also returns the concatenated string of the brand + model name
+            return  brandName + "+" + select2Elm[0].text.replaceAll(" ", "_"); //extaract the name of the selected component its an object in an array | it also returns the concatenated string of the brand + model name
         }
     }
 }

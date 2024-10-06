@@ -177,10 +177,13 @@ initialize(); //initializes the arrays
 document.getElementById("pc-builder-submit-button").addEventListener("click", async () => {
     let selectedComponents = await compileUserSelectedComponents();
 
+    try{
+        let priceData = await fetchPrice(selectedComponents);
 
-    let price = await fetchPrice(selectedComponents);
-
-    document.getElementById("price-estimate").textContent = price.price;
+        document.getElementById("price-estimate").textContent = `$${priceData.price}`;
+    }catch{
+        document.getElementById("price-estimate").textContent = "Error fetching price try again later.";
+    }
 });
 
 const fetchPrice = async function(selectedComponents){ //calls back end for back end processing and returns price estimate
@@ -192,7 +195,11 @@ const fetchPrice = async function(selectedComponents){ //calls back end for back
         body: JSON.stringify(selectedComponents)
     }
 
-    const response = await fetch('https://pcpricee.xyz:3566/get-price', options);
-    let data = await response.json();
-    return data;
+    const response = await fetch('https://pcpricee.xyz/get-price', options);
+    if(response.ok){
+        let data = await response.json();
+        return data;
+    } else {
+        throw new Error("Ebay fetch error")
+    }
 }
