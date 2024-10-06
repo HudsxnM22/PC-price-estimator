@@ -177,6 +177,14 @@ initialize(); //initializes the arrays
 document.getElementById("pc-builder-submit-button").addEventListener("click", async () => {
     let selectedComponents = await compileUserSelectedComponents();
 
+    document.getElementById("price-estimate").innerHTML = `
+        <l-tailspin
+        size="30"
+        stroke="5"
+        speed="0.9"
+        color="white" 
+        ></l-tailspin>`;
+
     try{
         let priceData = await fetchPrice(selectedComponents);
 
