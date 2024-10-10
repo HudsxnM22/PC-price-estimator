@@ -31,15 +31,10 @@
       <tr><a href="" class="topButton"><h4>Sell/Buy</h4></a></tr>
     </nav>
   </div>
-  <br>
-  <div class="pc-title">
-    <h3 id="pc-title-text">Build your PC. Get Estimate.</h3>
-  </div>
   <div id="main-wrapper">
     <div id="pc-builder">
       <div id="pc-component-picker-title">
         <h3>PC builder</h3>
-        <a id="submitButton"><button id="pc-builder-submit-button">Find Estimate</button></a>
       </div>
       <div id="dropDownMenuHolder">
           <table>
@@ -81,7 +76,7 @@
                         <option value="mini-itx">Mini-ITX</option>
                         <option value="micro-atx">Micro-ATX</option>
                         <option value="atx">ATX</option>
-                        <option value="not-sure">I'm not sure</option>
+                        <option value="motherboard">I'm not sure</option>
                     </select>
                     <select id="motherboard-select-socket" class="component-select">
                       <option value="">Choose a Motherboard Socket</option>
@@ -95,7 +90,7 @@
                       <option value="am3-plus">AM3+ (AMD)</option>
                       <option value="am4">AM4 (AMD)</option>
                       <option value="am5">AM5 (AMD)</option>
-                      <option value="not-sure">I'm not sure</option>
+                      <option value="used">I'm not sure</option>
                   </select>
                 </td>
             </tr>
@@ -213,7 +208,7 @@
                         <option value="80-plus-gold">80 Plus Gold</option>
                         <option value="80-plus-platinum">80 Plus Platinum</option>
                         <option value="80-plus-titanium">80 Plus Titanium</option>
-                        <option value="idk">im not sure</option>
+                        <option value="power_supply">im not sure</option>
                     </select>
                     <select id="power-supply-select-wattage" class="component-select">
                         <option value="">Choose PSU power</option>
@@ -234,21 +229,32 @@
                         <option value="1300W">1300W</option>
                         <option value="1500W">1500W</option>
                         <option value="1600W">1600W</option>
-                        <option value="idk">im not sure</option>
+                        <option value="">im not sure</option>
                     </select>
                 </td>
             </tr>
         </table>
       </div>
+      <a id="submitButton"><button id="pc-builder-submit-button">Find Estimate</button></a>
     </div>
 
     <div id="price-display">
-        <h1 id="price-display-title">Input Parts</h1>
-        <h1 id="price-estimate">$0</h1>
-        <p id="disclaimer"><a id="how-price" href="about.html">how do we get this?</a></p>
+        <div id="price-title-container">
+            <h1 id="price-estimate">Input parts</h1>
+        </div>
+        <div id="rec-holder"> 
+            <div id="rec-sell-price">
+                <h1 id="recS-title">recommended sell price</h1>
+                <h1 id="recS-estimate">$0</h1>
+            </div>
+            <div id="rec-buy-price">
+                <h1 id="recB-title">recommended buy price</h1>
+                <h1 id="recB-estimate">$0</h1>
+            </div>
+            <p id="disclaimer"><a id="how-price" href="about.html">how do we get this?</a></p>
+        </div>
     </div>
    </div>
-  <br>
     <div id="howToHolder">
         <div id="howToTitle">
             How to find your parts
@@ -260,7 +266,6 @@
             <div class="howToVid"><iframe width="1903" height="742" src="https://www.youtube.com/embed/N5CDzK_b-ng" title="How To: Use Speccy to get your computer&#39;s Specs | Speccy Tutorial For Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         </div>
     </div>
-  <br>
 
   <script type="module"  src="ComponentLists.js"></script>
 </body>

@@ -17,7 +17,7 @@ body {
   #topBar {
     width: 100%;
     margin-right: auto;
-    position: absolute;
+    position: relative;
     top: 0;
     z-index: 1000;
     display: flex;
@@ -132,6 +132,10 @@ body {
     touch-action: manipulation;
     width: 100%;
     will-change: transform;
+
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15px;
   }
 
   #pc-builder-submit-button:hover {
@@ -198,9 +202,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content; /* Adjust this value as necessary */
+    height: fit-content;
     text-align: center;
-    padding: 60px;
     color: #ffffff;
     background-color: rgb(22, 56, 88); 
     margin-top: 14vh;
@@ -218,6 +221,28 @@ body {
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   }
 
+  #price-estimate {
+    padding-top: 30px;
+    font-size: 64px;
+  }
+
+  #price-title-container {
+    background-color: rgb(14, 36, 56);
+    width: 100%;
+    border-top-left-radius: 15px;
+  }
+
+  #rec-holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #disclaimer {
+    position: absolute;
+    bottom: 10px;
+  }
+
   #how-price {
     color:#ffffff;
     font-size: 10px;
@@ -225,18 +250,39 @@ body {
     border: 2px, solid, white;
     padding: 5px;
     border-radius: 20px;
+    background-color: rgb(22, 56, 88);
+  }
+
+  #rec-sell-price {
+    background-color: rgb(22, 56, 88);
+    left: 0%;
+    bottom: 0%;
+    border-bottom-left-radius: 15px;
+    height: 50%;
+    width: 50%;
+    font-size: smaller;
+    border: 2px, solid, white;
+  }
+
+  #rec-buy-price {
+    background-color: rgb(22, 56, 88);
+    right: 0%;
+    bottom: 0%;
+    height: 50%;
+    width: 50%;
+    font-size: smaller;
+    border: 2px, solid, white;
   }
    
-
-      /*[How to bar]*/
+  /*[How to bar]*/
   #howToHolder {
     justify-content: center;
-    padding-top: 20px;
     height: fit-content;
     background-color: rgb(14, 36, 56);
     position: relative;
     margin-bottom: 0%;
-    margin-top: 75px;
+    margin-top: 10px;
+    padding-top: 20px;
   }
 
   #howToTitle {
@@ -276,7 +322,7 @@ body {
     margin-right: auto;
     padding-bottom: 10%; /* 16:9 aspect ratio */
     overflow: hidden;
-    background-color: aqua;
+    background-color: rgb(22, 56, 88);
   }
 
   .howToVid iframe {
@@ -347,7 +393,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       height: 60px;
-      position: relative;
+      position: static;
       max-width: 100%;
       margin-left: auto;
       margin-right: auto;
@@ -433,6 +479,8 @@ body {
       display: flex;
       flex-direction: column;
       z-index: 0;
+      gap: 0px;
+      margin-top: 130px;
     }
 
 
@@ -469,32 +517,34 @@ body {
 
     .selection-cell {
       display: flex;
-      flex-wrap: wrap; /* Allow wrapping for mobile devices */
+      flex-wrap: wrap;
     }
 
 
-      /*[price display]*/
+    /*[price display]*/
     #price-display {
-      display: flex;
+      width: 95%;
+      border-radius: 15px;
+      font-size: small;
       margin-left: auto;
       margin-right: auto;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: fit-content;
-      text-align: center;
-      margin-top: 0%;
-      width: 70%;
-      color: #ffffff;
-      background-color: rgb(22, 56, 88); 
-      font-family: 'Roboto', sans-serif;
-      font-weight: bold;
-      font-size: 80%;
-      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #price-title-container {
+      border-top-right-radius: 15px;
+    }
+  
+    #rec-holder {
+      border-bottom-right-radius: 15px;
+    }
+
+    #rec-buy-price {
+      border-bottom-right-radius: 15px;
     }
 
 
-          /*[How to DIV holder]*/
+    /*[How to DIV holder]*/
   #howToHolder {
     flex-direction: row;
     height: fit-content;

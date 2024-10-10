@@ -173,24 +173,37 @@ $(document).ready( function(){ //not select2 nodes
 
 initialize(); //initializes the arrays
 
-//compile user inputted parts | problems: user spamming button, user not inputting all parts.
+//compile user inputted parts and then display loader and then the final fetched price in 2 formats
 document.getElementById("pc-builder-submit-button").addEventListener("click", async () => {
     let selectedComponents = await compileUserSelectedComponents();
 
-    document.getElementById("price-estimate").innerHTML = `
+    document.getElementById("recS-estimate").innerHTML = ` 
         <l-tailspin
-        size="30"
+        size="20"
         stroke="5"
         speed="0.9"
         color="white" 
-        ></l-tailspin>`;
+        ></l-tailspin>`;// sell ldr
+
+    document.getElementById("recB-estimate").innerHTML = `
+        <l-tailspin
+        size="20"
+        stroke="5"
+        speed="0.9"
+        color="white" 
+        ></l-tailspin>`; //buy ldr
 
     try{
         let priceData = await fetchPrice(selectedComponents);
+        let price = priceData.price
 
-        document.getElementById("price-estimate").textContent = `$${priceData.price}`;
-    }catch{
-        document.getElementById("price-estimate").textContent = "Error fetching price try again later.";
+        document.getElementById("price-estimate").textContent = `Your PC's Estimate`;
+        document.getElementById("recS-estimate").textContent = `$${parseInt(price * .80)}`; //20% markdown for seel your PC. this is the usual case for accurate pricing
+        document.getElementById("recB-estimate").textContent = `$${parseInt(price * 1.15)}`; //this is less accurate but still gives a fairl good estimate for the cheapest you can buy a pc with these parts
+    }catch(error){
+        document.getElementById("recS-title").textContent = "Error fetching price try again later.";
+        document.getElementById("recB-title").textContent = "Error fetching price try again later.";
+        console.error(error)
     }
 });
 
