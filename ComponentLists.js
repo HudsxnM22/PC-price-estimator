@@ -196,15 +196,15 @@ document.getElementById("pc-builder-submit-button").addEventListener("click", as
     try{
         let priceData = await fetchPrice(selectedComponents);
         let price = priceData.price
-        if (price == -1){
-            document.getElementById("price-estimate").textContent = `You've exceeded your estimate amount. try again later`;
-            document.getElementById("price-estimate").style.fontSize = '14px'
-        }
 
-        document.getElementById("price-estimate").textContent = `Your PC's Estimate`;
-        document.getElementById("recS-estimate").textContent = `$${parseInt(price * .80)}`; //20% markdown for seel your PC. this is the usual case for accurate pricing
-        document.getElementById("recB-estimate").textContent = `$${parseInt(price * 1.15)}`; //this is less accurate but still gives a fairl good estimate for the cheapest you can buy a pc with these parts
-    }catch(error){
+        if (price == -1){ //checks if user went above rate limit
+            changeRateLimitButton();
+        }else{
+            document.getElementById("price-estimate").textContent = `Your PC's Estimate`;
+            document.getElementById("recS-estimate").textContent = `$${parseInt(price * .80)}`; //20% markdown for seel your PC. this is the usual case for accurate pricing
+            document.getElementById("recB-estimate").textContent = `$${parseInt(price * 1.15)}`; //this is less accurate but still gives a fairl good estimate for the cheapest you can buy a pc with these parts
+        }
+        }catch(error){
         document.getElementById("recS-title").textContent = "Error fetching price try again later.";
         document.getElementById("recB-title").textContent = "Error fetching price try again later.";
         console.error(error)
@@ -227,4 +227,10 @@ const fetchPrice = async function(selectedComponents){ //calls back end for back
     } else {
         throw new Error("Ebay fetch error")
     }
+}
+
+function changeRateLimitButton(){
+    document.getElementById("pc-builder-submit-button").textContent = 'queries exceeded try again later'
+    document.getElementById("pc-builder-submit-button").style.backgroundColor = "rgb(168, 23, 3)"
+    document.getElementById("pc-builder-submit-button").style.color = "white"
 }
