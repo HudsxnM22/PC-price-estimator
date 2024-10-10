@@ -6,7 +6,7 @@ export function compileUserSelectedComponents() {
             {partname: extractComponentSelected("CPUs", true), part: 'cpu'},
             {partname: extractComponentSelected("CPUcoolers", false), part: 'cpu-cooler'},
             {partname: extractComponentSelected("motherboards", false), part: 'mobo'},
-            {partname: extractComponentSelected("memory", false), part: 'mem'} ,
+            {partname: extractComponentSelected("memory", false), part: 'memory'} ,
             {partname: extractComponentSelected("storages", false), part: 'storage'},
             {partname: extractComponentSelected("GPUs", true), part: 'gpu'},
             {partname: extractComponentSelected("cases", false), part: 'case'},

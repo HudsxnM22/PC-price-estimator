@@ -196,6 +196,10 @@ document.getElementById("pc-builder-submit-button").addEventListener("click", as
     try{
         let priceData = await fetchPrice(selectedComponents);
         let price = priceData.price
+        if (price == -1){
+            document.getElementById("price-estimate").textContent = `You've exceeded your estimate amount. try again later`;
+            document.getElementById("price-estimate").style.fontSize = '14px'
+        }
 
         document.getElementById("price-estimate").textContent = `Your PC's Estimate`;
         document.getElementById("recS-estimate").textContent = `$${parseInt(price * .80)}`; //20% markdown for seel your PC. this is the usual case for accurate pricing
