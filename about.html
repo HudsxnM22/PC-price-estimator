@@ -6,9 +6,10 @@
   <title>PC-price estimator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link href="" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/Images/logo.png">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
 
@@ -16,28 +17,30 @@
   <div id="topBar">
     <div id="topBarTitle">
       <img src="/Images/logo.png" id="logo-banner" width="90px"></img>
-      <h1>PC Price Estimator 🚧Under development🚧</h1>
+      <h1>PC Price Estimator</h1>
     </div>
     <nav id="topNav">
       <tr><a href="index.html" class="topButton"><h4>Home</h4></a></tr>
       <tr><a href="about.html" class="topButton"><h4>About</h4></a></tr>
-      <tr><a href="https://www.ebay.com/sl/sell" class="topButton"><h4>Sell/buy</h4></a></tr>
+      <tr><a href="https://www.ebay.com/sl/sell" class="topButton"><h4>Sell/Buy</h4></a></tr>
     </nav>
   </div>
 
-  <br>
-  <br>
-
   <div id="aboutContent">
     <div id="about">
-      <h4 id="aboutTitle">🚧About🚧</h4>
-      <p id="aboutText">PC-part Estimator is a personal development project created by Hudson M.    The purpose of this project is to assist beginner PC sellers in estimating a reasonable price for their PCs. To use the service, you need to input all the components of the computer you are trying to sell. The service then interacts with an online marketplace's API to determine the best price for each item based on previously sold versions of those components. The design of the component selection process prioritizes user-friendliness, especially for beginners. Therefore, it only allows the selection of standard or broad variants of parts. This means that if you have a special or limited edition part that you believe might sell for more, the service will not provide an accurate price for that specific part. For example, if you have an AMD Gigabyte limited edition RX 6700XT GPU, the estimator will only consider the price for the term "AMD RX 6700XT" without focusing on specific models or manufacturers. This design decision assumes that most buyers generally purchase based on the type of card rather than the specific model and manufacturer details.</p>
+      <h4 id="aboutTitle">About</h4>
+      <p id="aboutText">PC-part Estimator is a personal development project created by Hudson M.    The purpose of this project is to assist beginner PC sellers in estimating a reasonable price for their PCs. To use the service, you need to input all the components of the computer you are trying to sell. The service then interacts with a Ebays API to determine the best price for each item based on current listings of those components. The design of the component selection process prioritizes user-friendliness, especially for beginners. Therefore, it only allows the selection of standard or broad variants of parts. This means that if you have a special or limited edition part that you believe might sell for more, the service will not provide an accurate price for that specific part. For example, if you have an AMD Gigabyte limited edition RX 6700XT GPU, the estimator will only consider the price for the term "AMD RX 6700XT" without focusing on specific models or manufacturers. This design decision assumes that most buyers generally purchase based on the type of card rather than the specific model and manufacturer details.</p>
     </div>
-    <br>
-    <br>
+    <div id="how">
+      <div id="how-image"></div>
+    </div>
   </div>
-  <br>
+  
 
-  <script src="visibility.js"></script>
+  <footer>
+    <div>© 2024 PC Price Estimator</div>
+    <div><a id="github-link" href="https://github.com/HudsxnM22/PC-price-estimator">Github</a></div>
+  </footer>
+
 </body>
 </html>

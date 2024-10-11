@@ -278,7 +278,7 @@ body {
   #howToHolder {
     justify-content: center;
     height: fit-content;
-    background-color: rgb(14, 36, 56);
+    background-color: rgb(22, 56, 88);
     position: relative;
     margin-bottom: 0%;
     margin-top: 10px;
@@ -337,7 +337,7 @@ body {
    /*About page----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
   #aboutContent {
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
   }
 
@@ -347,19 +347,18 @@ body {
     margin-right: auto;
     background-color: rgb(255, 255, 255);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 45%;
+    height: fit-content;
     padding: 10px;
+    padding-top: 40px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
     position: relative;
   }
 
-  #howTo.inview {
-    animation: slideUp 1.4s forwards;
-    opacity: 1; /* Show when in view */
-  }
 
   #aboutText {
     position: relative;
@@ -383,6 +382,61 @@ body {
     text-shadow: 1px;
     position: absolute;
     top: 0%;
+  }
+
+  #how {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    padding: 10px;
+    border-radius: 15px;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  #how-title {
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    position: absolute;
+    top: 0%;
+  }
+
+  #how-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("/Images/howGraphic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+  }
+
+  /*Footer*/
+  footer{
+    display: flex;
+    padding: 9px;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(14, 36, 56);
+    color: rgb(255, 255, 255);
+    bottom: 0px;
+  }
+
+  #github-link {
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto';
+    text-decoration: none;
   }
 
   @media (max-width: 1300px) { /*for smaller webpage sizes and mobile users*/
@@ -606,6 +660,8 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      margin-top: 150px;
+      gap: 15px;
     }
 
     #about {
@@ -640,8 +696,13 @@ body {
       text-shadow: 1px;
       position: relative;
       top: 3%;
+      padding-top: 30px;
     }
 
+    #how {
+      width: 90%;
+      height: 500px;
+    }
   }
 
   @media (max-width: 700px) { /*media for very small screens and some specific detailing regarding mobile site---------------------------------------------------------------------------------------------------------------------------------------------------*/
