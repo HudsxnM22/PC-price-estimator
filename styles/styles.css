@@ -277,20 +277,22 @@ body {
   /*[How to bar]*/
   #howToHolder {
     justify-content: center;
-    height: fit-content;
+    height: 43vh;
     background-color: rgb(22, 56, 88);
     position: relative;
-    margin-bottom: 0%;
-    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
     padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   #howToTitle {
-    font-size: 28px;
+    font-size: 45px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    padding-left: 4%;
   }
 
   #howToText {
@@ -311,7 +313,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
+    padding: 50px;
   }
 
   .howToVid {
@@ -606,14 +608,14 @@ body {
     padding-bottom: 20px;
     position: relative;
     margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+
   }
 
   #howTo {
     display: flex;
-    margin-top: 8%;
     max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
     align-items: center;
     justify-content: center;
     min-width: 85%;
@@ -623,7 +625,7 @@ body {
   }
 
   #howToTitle {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #howToText {
