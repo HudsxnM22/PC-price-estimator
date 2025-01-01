@@ -54,6 +54,5 @@ This project was built with the primary purpose of learning and practicing full-
 
 - Some parts of the codebase may be inconsistent as they reflect the learning journey and the adoption of better practices over time.
 - The project serves as a practical application of various web development concepts and may not adhere to all best practices found in production-level applications, I have tried my absolute     best to adhere to the best practices, but there may still be some issues in code efficiency or security that my lack of experience has yet to identify.
-- Contributions and suggestions for improvements are welcome, as they can further the learning experience for everyone involved.
 
 
