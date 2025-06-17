@@ -1,0 +1,744 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #topNav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 35%;
+    align-items: center;
+    padding: 0 20px;
+    margin-right: 15%;
+  }
+
+  #topBar {
+    width: 100%;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    background-color: rgb(14, 36, 56);
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  }
+
+  #topBarTitle {
+    width: fit-content;
+    margin-right: auto;
+    position: relative;
+    align-items: center;
+    padding: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    background-color: transparent;
+  }
+  
+
+  .topButton {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(253, 253, 253);
+    padding: 10px 20px;
+  }
+
+   /*Home page----------------------------------------------------------------------------------------------------------------------------------------------------*/
+      /*[main wrapper]*/
+  #main-wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 0;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 12px;
+    flex: 1 0 auto;
+  }
+
+      /*[PC-builder title]*/
+  .pc-title {
+    z-index: 1000;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+    width: 40%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    justify-content: center;
+    text-align: center;
+  }
+
+      /*[PC-builder holder]*/
+  #pc-builder {
+    display: block;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;   
+    justify-content: center;
+    width: 60%;
+    margin-left: 4%;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    animation: slideInRight 1.4s;
+  }
+
+  #pc-component-picker-title {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    align-content: center;
+    justify-content: space-between;
+    font-weight: bolder;
+    padding: 3px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  #pc-builder-submit-button {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1a1a1a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15px;
+  }
+
+  #pc-builder-submit-button:hover {
+    color: #ffffff;
+    background-color: rgb(14, 36, 56);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  th, td {
+      border-bottom: 1px solid #000000;
+      padding: 8px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+  }
+
+
+  th {
+      background-color: transparent;
+      color: #000000;
+      text-align: left;
+      border-top-color: transparent;
+  }
+
+
+  .selection-cell {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .component-select {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      width: 100%;
+      padding: 3px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: transparent;
+      border-color: #000000;
+      appearance: none;
+      cursor: pointer;
+      margin-bottom: 3px;
+      color: gray;
+  }
+
+
+  option {
+    color: black;
+  }
+
+      /*[price display]*/
+  #price-display {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgb(22, 56, 88); 
+    margin-top: 14vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    animation: slideInLeft 1.4s;
+    width: 35%;
+  }
+
+  #how-price:hover {
+    background-color: rgb(14, 36, 56);
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  }
+
+  #price-estimate {
+    padding-top: 30px;
+    font-size: 64px;
+  }
+
+  #price-title-container {
+    background-color: rgb(14, 36, 56);
+    width: 100%;
+    border-top-left-radius: 15px;
+  }
+
+  #rec-holder {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #disclaimer {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  #how-price {
+    color:#ffffff;
+    font-size: 10px;
+    text-decoration: none;
+    border: 2px, solid, white;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgb(22, 56, 88);
+  }
+
+  #rec-sell-price {
+    background-color: rgb(22, 56, 88);
+    left: 0%;
+    bottom: 0%;
+    border-bottom-left-radius: 15px;
+    height: 50%;
+    width: 50%;
+    font-size: smaller;
+    border: 2px, solid, white;
+  }
+
+  #rec-buy-price {
+    background-color: rgb(22, 56, 88);
+    right: 0%;
+    bottom: 0%;
+    height: 50%;
+    width: 50%;
+    font-size: smaller;
+    border: 2px, solid, white;
+  }
+   
+  /*[How to bar]*/
+  #howToHolder {
+    justify-content: center;
+    height: 43vh;
+    background-color: rgb(22, 56, 88);
+    position: relative;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #howToTitle {
+    font-size: 45px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+
+  #howToText {
+    font-family: 'Roboto',sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    width: fit-content;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 3px;
+  }
+
+  #howToContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .howToVid {
+    position: relative;
+    width: 20%; /* The container takes the full width of its parent */
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    background-color: rgb(22, 56, 88);
+  }
+
+  .howToVid iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+   /*About page----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+  #aboutContent {
+    margin-top: 70px;
+    display: flex;
+  }
+
+  #about {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: fit-content;
+    padding: 10px;
+    padding-top: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    position: relative;
+  }
+
+
+  #aboutText {
+    position: relative;
+    padding-left: 1%;
+    padding-bottom: 40px;
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    top: 10%;
+  }
+
+  #aboutTitle {
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    position: absolute;
+    top: 0%;
+  }
+
+  #how {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    padding: 10px;
+    border-radius: 15px;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  #how-title {
+    font-family: 'Roboto',sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #111111;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    position: absolute;
+    top: 0%;
+  }
+
+  #how-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("/Images/howGraphic.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+  }
+
+  /*Footer*/
+  footer{
+    display: flex;
+    margin-top: auto;
+    flex-shrink: 0;
+    align-items: end;
+    padding: 9px;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(14, 36, 56);
+    color: rgb(255, 255, 255);
+    bottom: 0px;
+  }
+
+  #github-link {
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto';
+    text-decoration: none;
+  }
+
+  @media (max-width: 1300px) { /*for smaller webpage sizes and mobile users*/
+
+    /* both about and home --------------------------------------------------------------------------------------------------------------------------------------------*/
+    #topBar {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 60px;
+      position: static;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0%;
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #topBarTitle {
+      width: 100%;
+      height: 80px;
+      font-size: small;
+      padding: 10px;
+      gap: 10px;
+      background-color: rgb(14, 36, 56);
+      position: relative;
+    }
+
+    #topNav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 60px;
+      gap: 10%;
+      background-color: rgb(22, 56, 88);
+      padding: 5px;
+    }
+
+    #logo-banner {
+      opacity: 1;
+    }
+
+    .topButton {
+      align-items: center;
+      appearance: none;
+      background-color: rgb(22, 56, 88);
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, 0.603) 0 3px 5px -1px,rgba(3, 3, 3, 0.5) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-flex;
+      fill: currentcolor;
+      font-family: Roboto,Arial,sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      justify-content: center;
+      letter-spacing: .25px;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+    }
+
+    .topButton:hover {
+      background: rgb(14, 36, 56);
+      color: #ffffff;
+    }
+    
+
+    /*Home page-smaller screens---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    #main-wrapper {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 0;
+      gap: 0px;
+      margin-top: 130px;
+    }
+
+
+        /*[PC-builder holder]*/
+    #pc-builder {
+      display: block;
+      margin-right: auto;
+      margin-left: auto; 
+      font-family: 'Roboto', sans-serif;   
+      justify-content: center;
+      width: 95%;
+      height: auto;
+      margin-top: 12px;
+    }
+
+    #pc-component-picker-title {
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+      align-content: center;
+      justify-content: space-between;
+      font-weight: bold;
+      padding: 3px;
+      height: fit-content;
+      width: 100%;
+    }
+
+    .component-select {
+      font-family: 'Roboto', sans-serif;
+      font-size: smaller;
+      font-weight: bold;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+
+    .selection-cell {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    /*[price display]*/
+    #price-display {
+      width: 95%;
+      border-radius: 15px;
+      font-size: small;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+
+    #price-title-container {
+      border-top-right-radius: 15px;
+    }
+  
+    #rec-holder {
+      border-bottom-right-radius: 15px;
+    }
+
+    #rec-buy-price {
+      border-bottom-right-radius: 15px;
+    }
+
+
+    /*[How to DIV holder]*/
+  #howToHolder {
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #howTo {
+    display: flex;
+    max-width: 85%;
+    align-items: center;
+    justify-content: center;
+    min-width: 85%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  }
+
+  #howToTitle {
+    font-size: 30px;
+  }
+
+  #howToText {
+    font-family: 'Roboto',sans-serif;
+    font-size: small;
+    font-weight: bold;
+    text-shadow: #111111;
+    text-shadow: 1px;
+    width: fit-content;
+  }
+
+  #howToContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .howToVid {
+    position: relative;
+    width: 70%; /* container takes the full width of its parent */
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35%; /* 16:9 aspect ratio */
+    overflow: hidden;
+  }
+
+     /*About page-smaller screens---------------------------------------------------------------------------------------------------------------------------------------------------*/
+    #aboutContent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 150px;
+      gap: 15px;
+    }
+
+    #about {
+      display: flex;
+      max-width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      justify-content: center;
+      min-width: 85%;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    }
+
+    #aboutTitle {
+      font-family: 'Roboto',sans-serif;
+      font-size: medium;
+      font-weight: bold;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: absolute;
+      top: -3%;
+    }
+
+    #aboutText {
+      font-family: 'Roboto',sans-serif;
+      font-size: small;
+      color: #111111;
+      text-shadow: #111111;
+      text-shadow: 1px;
+      position: relative;
+      top: 3%;
+      padding-top: 30px;
+    }
+
+    #how {
+      width: 90%;
+      height: 500px;
+    }
+  }
+
+  @media (max-width: 700px) { /*media for very small screens and some specific detailing regarding mobile site---------------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Power supply title will wrap making the bottom lines not line up this is to fix it. it only happens for power supply*/
+    #power-supply-title {
+      font-size: small;
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      right: -100%; /* Start right of the container */
+      transform: translateX(400%);
+    }
+    100% {
+      right: 0; /* End at the final position */
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      left: -80%; 
+      transform: translateX(-100%);
+    }
+    100% {
+      left: 0;
+      transform: translateX(0%);
+    }
+  }
